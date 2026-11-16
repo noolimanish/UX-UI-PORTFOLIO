@@ -36,7 +36,7 @@ export default function CreativeMascotNavbar({
     <header className="fixed top-8 sm:top-9 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none select-none">
       <div
         ref={navRef}
-        className="relative flex items-center gap-1 sm:gap-2 px-3 sm:px-5 py-2 rounded-full bg-black/95 backdrop-blur-2xl border border-white/20 shadow-[0_15px_35px_rgba(0,0,0,0.8),0_0_20px_rgba(255,255,255,0.05)] pointer-events-auto transition-all"
+        className="relative flex items-center gap-0.5 sm:gap-2 px-2 sm:px-5 py-1.5 sm:py-2 rounded-full bg-black/95 backdrop-blur-2xl border border-white/20 shadow-[0_15px_35px_rgba(0,0,0,0.8),0_0_20px_rgba(255,255,255,0.05)] pointer-events-auto transition-all max-w-[96vw]"
       >
         {/* ========================================================
             THE PEEKING MASCOT SLIDING ON TOP OF THE NAVBAR
@@ -88,7 +88,7 @@ export default function CreativeMascotNavbar({
                   } catch {}
                   onNavigate?.(item.id);
                 }}
-                className={`relative px-3 sm:px-4 py-1.5 rounded-full font-sans text-xs sm:text-sm font-medium transition-all cursor-pointer ${
+                className={`relative px-2.5 sm:px-4 py-1 sm:py-1.5 rounded-full font-sans text-[11px] sm:text-sm font-medium transition-all cursor-pointer ${
                   isActive
                     ? "text-white font-bold"
                     : "text-slate-300 hover:text-white"

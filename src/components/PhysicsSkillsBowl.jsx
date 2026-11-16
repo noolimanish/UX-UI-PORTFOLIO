@@ -26,16 +26,21 @@ export default function PhysicsSkillsBowl() {
 
   // Initialize skills scattered inside the glass block
   const [skills, setSkills] = useState(() => {
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 640;
+    const numCols = isMobile ? 2 : 4;
+    const spacingX = isMobile ? 130 : 210;
+    const spacingY = isMobile ? 60 : 95;
     return BUCKET_SKILLS.map((s, i) => {
-      const col = i % 4;
-      const row = Math.floor(i / 4);
+      const col = i % numCols;
+      const row = Math.floor(i / numCols);
       return {
         ...s,
-        x: 50 + col * 210 + (Math.random() * 40 - 20),
-        y: 60 + row * 95 + (Math.random() * 30 - 15),
+        width: isMobile ? Math.min(s.width * 0.78, 165) : s.width,
+        x: (isMobile ? 20 : 50) + col * spacingX + (Math.random() * 20 - 10),
+        y: (isMobile ? 40 : 60) + row * spacingY + (Math.random() * 20 - 10),
         vx: (Math.random() - 0.5) * 40,
         vy: (Math.random() - 0.5) * 40,
-        rot: (Math.random() - 0.5) * 16,
+        rot: (Math.random() - 0.5) * 14,
       };
     });
   });
