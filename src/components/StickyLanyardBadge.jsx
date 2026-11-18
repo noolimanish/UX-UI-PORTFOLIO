@@ -38,11 +38,10 @@ export default function StickyLanyardBadge({ onOpenDossier }) {
   return (
     <>
       {/* ========================================================
-          HANGING PENDULUM GLASS BADGE (Contained inside Hero)
-          Absolute positioning so it hangs at the top of Hero and
-          DOES NOT float over projects when scrolling down!
+          HANGING PENDULUM GLASS BADGE (Sticky Fixed on Screen)
+          Suspended from top of viewport, stays fixed while scrolling!
           ======================================================== */}
-      <div className="hidden sm:block absolute top-0 right-4 sm:right-8 lg:right-12 z-30 select-none pointer-events-auto">
+      <div className="hidden sm:block fixed top-0 right-4 sm:right-6 lg:right-10 z-40 select-none pointer-events-auto">
         
         {/* Top Ceiling Anchor Mount */}
         <div className="mx-auto w-6 h-2.5 bg-gradient-to-b from-neutral-800 to-neutral-900 border-x border-b border-white/20 rounded-b shadow-sm flex items-center justify-center">
@@ -264,9 +263,9 @@ export default function StickyLanyardBadge({ onOpenDossier }) {
       </div>
 
       {/* ========================================================
-          MOBILE (screens < sm): Compact corner pill
+          MOBILE (screens < sm): Sticky Fixed bottom-right pill
           ======================================================== */}
-      <div className="block sm:hidden absolute top-20 right-3 z-30">
+      <div className="block sm:hidden fixed bottom-6 right-4 z-40">
         <button
           onClick={() => {
             setIsFlipped((p) => !p);
