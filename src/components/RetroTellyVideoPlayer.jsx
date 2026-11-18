@@ -72,20 +72,37 @@ export default function RetroTellyVideoPlayer() {
   };
 
   return (
-    <section id="telly" className="relative py-20 sm:py-28 px-4 sm:px-8 max-w-5xl mx-auto space-y-10 select-none border-t border-white/10">
+    <section id="telly" className="relative py-24 sm:py-32 px-4 sm:px-8 max-w-5xl mx-auto space-y-12 select-none border-t border-white/10">
       
-      {/* SECTION HEADER */}
-      <div className="space-y-2 text-left">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-950/40 border border-red-500/30 text-xs font-mono text-red-400">
-          <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-          <span>// CREATIVE DIRECTION &amp; SHORT FILMS</span>
+      {/* SECTION HEADER: Editorial Font Mixing & Pastel Stickers (Hero Matching) */}
+      <div className="relative text-center space-y-4 max-w-3xl mx-auto">
+        
+        {/* Top Pastel Sticker Row */}
+        <div className="flex items-center justify-center gap-3 sm:gap-6 mb-2 flex-wrap">
+          <div className="px-3.5 py-1 rounded-full bg-[#dcfce7] text-[#14532d] border border-[#86efac] shadow-sm font-mono text-[10px] sm:text-xs font-bold tracking-wider rotate-[-2deg]">
+            35MM REEL
+          </div>
+          <span className="font-['Playfair_Display'] italic text-slate-300 text-sm sm:text-base font-normal tracking-wide">
+            directorial cuts &amp; vision
+          </span>
+          <div className="px-3.5 py-1 rounded-full bg-[#fef9c3] text-[#713f12] border border-[#fde047] shadow-sm font-mono text-[10px] sm:text-xs font-bold tracking-wider rotate-[2deg]">
+            4K BROADCAST
+          </div>
         </div>
 
-        <h3 className="font-display font-black text-3xl sm:text-5xl text-white tracking-tight">
-          Directorial Work &amp; <span className="font-serifTitle italic font-normal text-red-400">Teasers</span>
-        </h3>
+        {/* Masterful Headline with Font Mixing */}
+        <div className="space-y-1">
+          <h2 className="font-['Anton',sans-serif] text-5xl sm:text-7xl md:text-8xl tracking-wider text-white uppercase leading-none filter drop-shadow">
+            DIRECTORIAL WORK
+          </h2>
+          <div className="-mt-3 sm:-mt-6">
+            <span className="font-['Playfair_Display'] italic font-normal text-rose-400 text-2xl sm:text-4xl md:text-5xl tracking-tight filter drop-shadow-md">
+              Short Films &amp; Teasers
+            </span>
+          </div>
+        </div>
 
-        <p className="font-serifTitle italic text-sm sm:text-base text-slate-300 font-light max-w-lg">
+        <p className="font-sans text-xs sm:text-sm text-slate-300 font-light max-w-lg mx-auto leading-relaxed pt-2">
           Select a compact disc below to slide it into the vintage player and broadcast directly on the CRT telly.
         </p>
       </div>
@@ -118,10 +135,10 @@ export default function RetroTellyVideoPlayer() {
           )}
         </AnimatePresence>
 
-        {/* CRT TV Case (Warm Cream / Retro Plastic Heavy Bezel) */}
+        {/* CRT TV Case (Warm Cream / Retro Heavy Bezel) */}
         <div className="relative w-full max-w-2xl rounded-[38px] bg-[#d9d5c9] border-4 border-[#b5af9f] shadow-[0_30px_70px_rgba(0,0,0,0.95),0_0_40px_rgba(255,255,255,0.06)] p-5 sm:p-7 flex flex-col justify-between text-black">
           
-          {/* Top Telly Brand Tag & Antenna / Status LEDs */}
+          {/* Top Telly Brand Tag & Status LEDs */}
           <div className="flex justify-between items-center text-[10px] sm:text-xs font-mono font-bold text-slate-800 pb-3 border-b border-[#b5af9f]/60">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse" />
@@ -130,7 +147,7 @@ export default function RetroTellyVideoPlayer() {
             <div className="flex items-center gap-3 text-slate-700">
               <button
                 onClick={() => setScanlinesActive(!scanlinesActive)}
-                className="px-2 py-0.5 rounded bg-[#c5c0b1] hover:bg-[#b0aba0] text-[9px] font-mono transition-colors cursor-pointer"
+                className="px-2.5 py-1 rounded bg-[#c5c0b1] hover:bg-[#b0aba0] text-[9px] font-mono transition-colors cursor-pointer"
                 title="Toggle retro CRT scanlines overlay"
               >
                 SCANLINES: {scanlinesActive ? "ON" : "OFF"}
@@ -252,7 +269,7 @@ export default function RetroTellyVideoPlayer() {
         {/* ========================================================
             DVD / CD PLAYER COMPACT TRAY (Slot Loading Console)
             ======================================================== */}
-        <div className="w-full max-w-md h-13 rounded-2xl bg-[#14161f] border-2 border-[#282b3a] shadow-2xl mt-4 flex items-center justify-between px-5 text-white font-mono text-xs relative overflow-hidden">
+        <div className="w-full max-w-md h-13 rounded-2xl bg-[#0c0d14]/90 border-2 border-[#f97316]/30 shadow-2xl mt-4 flex items-center justify-between px-5 text-white font-mono text-xs relative overflow-hidden">
           <div className="flex items-center gap-2.5">
             <span className={`w-2 h-2 rounded-full ${activeDisc ? "bg-emerald-400 animate-pulse" : "bg-slate-500"}`} />
             <div>
@@ -273,14 +290,14 @@ export default function RetroTellyVideoPlayer() {
 
       {/* ========================================================
           SMALL HORIZONTAL CARDS: Only Delirium Teaser & Promo
-          (Exactly as requested - compact, no big square cards)
+          (Warm Sketch Cards matching Hero & Case Studies)
           ======================================================== */}
       <div className="space-y-3 pt-2 max-w-xl mx-auto">
         <div className="text-center font-mono text-[10px] text-slate-400 uppercase tracking-widest">
           SELECT A DISC BELOW TO POP INTO CRT TELLY ↴
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
           {TELLY_DISCS.map((disc) => {
             const isSelected = activeDisc?.id === disc.id;
             return (
@@ -289,33 +306,41 @@ export default function RetroTellyVideoPlayer() {
                 whileHover={{ y: -3, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => handleSelectDisc(disc)}
-                className={`p-3.5 rounded-2xl border transition-all cursor-pointer flex items-center justify-between gap-3 shadow-md select-none relative overflow-hidden group ${
+                className={`p-3.5 rounded-2xl border-2 transition-all cursor-pointer flex items-center justify-between gap-3 shadow-md select-none relative overflow-hidden group ${
                   isSelected
-                    ? "border-emerald-400 bg-neutral-900/90 shadow-[0_0_20px_rgba(16,185,129,0.35)]"
-                    : "border-white/15 bg-neutral-900/60 hover:border-white/30 hover:bg-neutral-800/70"
+                    ? "border-emerald-400 bg-[#0c0d14]/95 shadow-[0_0_25px_rgba(16,185,129,0.35)]"
+                    : "border-[#f97316]/40 bg-[#0c0d14]/85 hover:border-[#f97316] hover:bg-[#0c0d14]/95"
                 }`}
               >
+                {/* Subtle Drafting Grid Pattern */}
+                <div className="absolute inset-0 opacity-[0.035] pointer-events-none bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:20px_20px]" />
+
                 {/* Left Disc Icon & Title */}
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-neutral-800 border border-white/20 flex items-center justify-center text-lg shrink-0 group-hover:rotate-45 transition-transform">
+                <div className="flex items-center gap-3 relative z-10">
+                  <div className="w-10 h-10 rounded-full bg-neutral-900 border border-white/20 flex items-center justify-center text-lg shrink-0 group-hover:rotate-45 transition-transform shadow-inner">
                     {disc.icon}
                   </div>
                   <div>
-                    <h5 className="font-display font-extrabold text-xs sm:text-sm text-white leading-tight">
+                    <h5 className="font-sans font-bold text-xs sm:text-sm text-white leading-tight">
                       {disc.title}
                     </h5>
-                    <p className="font-mono text-[9px] text-slate-400">
-                      {disc.ch} • {disc.duration}
-                    </p>
+                    <div className="flex items-center gap-2 mt-0.5">
+                      <span className="px-1.5 py-0.2 rounded bg-[#fef9c3] text-[#713f12] font-mono text-[8px] font-bold">
+                        {disc.ch}
+                      </span>
+                      <span className="font-mono text-[9px] text-slate-400">
+                        {disc.duration}
+                      </span>
+                    </div>
                   </div>
                 </div>
 
                 {/* Right Action Badge */}
                 <span
-                  className={`text-[9px] font-mono font-bold px-2.5 py-1 rounded-full border ${
+                  className={`text-[9px] font-mono font-bold px-3 py-1.5 rounded-xl border-2 transition-all relative z-10 ${
                     isSelected
-                      ? "bg-emerald-400 text-black border-emerald-400"
-                      : "bg-white/5 text-slate-300 border-white/10 group-hover:border-white/20"
+                      ? "bg-emerald-400 text-black border-emerald-400 shadow-sm"
+                      : "bg-black text-white border-white/20 group-hover:border-white/40"
                   }`}
                 >
                   {isSelected ? "PLAYING ●" : "POP IN ↗"}

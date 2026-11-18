@@ -29,7 +29,7 @@ export default function RedSayHiFooter({ onOpenDossier }) {
       {/* ========================================================
           PANORAMIC RED "SAY HI" BANNER (Matches User Reference Image 3!)
           ======================================================== */}
-      <div className="relative w-full bg-[#e52020] text-white py-12 sm:py-16 px-6 sm:px-12 overflow-hidden shadow-[0_-15px_50px_rgba(229,32,32,0.35)]">
+      <div className="relative w-full bg-[#e52020] text-white py-14 sm:py-20 px-6 sm:px-12 overflow-hidden shadow-[0_-15px_50px_rgba(229,32,32,0.35)]">
         
         {/* Sunburst Radial Lines Background Pattern (Reference Image 3) */}
         <div className="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(circle_at_center,#ffffff_1px,transparent_1px)] [background-size:16px_16px]" />
@@ -44,26 +44,48 @@ export default function RedSayHiFooter({ onOpenDossier }) {
 
         <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
           
-          {/* LEFT: Massive "SAY HI" Typography & Email (Reference Image 3) */}
+          {/* LEFT: Massive "SAY HI" Font Mixing Typography & Email */}
           <div className="space-y-4 text-center lg:text-left">
-            <h2 className="font-display font-black text-6xl sm:text-8xl md:text-9xl text-white tracking-tighter leading-none drop-shadow-[0_4px_10px_rgba(0,0,0,0.3)]">
-              SAY HI
-            </h2>
+            
+            {/* Top Pastel Sticker Row */}
+            <div className="flex items-center justify-center lg:justify-start gap-2.5 mb-2 flex-wrap">
+              <div className="px-3 py-0.5 rounded-full bg-[#dcfce7] text-[#14532d] border border-[#86efac] shadow-sm font-mono text-[10px] font-bold tracking-wider rotate-[-2deg]">
+                GET IN TOUCH
+              </div>
+              <span className="font-['Playfair_Display'] italic text-white/90 text-sm font-normal tracking-wide">
+                let's build something great
+              </span>
+              <div className="px-3 py-0.5 rounded-full bg-[#fef9c3] text-[#713f12] border border-[#fde047] shadow-sm font-mono text-[10px] font-bold tracking-wider rotate-[2deg]">
+                OPEN FOR WORK
+              </div>
+            </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-3">
+            {/* Block Anton + Script Overlay */}
+            <div className="space-y-1">
+              <h2 className="font-['Anton',sans-serif] text-6xl sm:text-8xl md:text-9xl text-white tracking-wider uppercase leading-none drop-shadow-[0_4px_10px_rgba(0,0,0,0.3)]">
+                SAY HI
+              </h2>
+              <div className="-mt-3 sm:-mt-6">
+                <span className="font-['Playfair_Display'] italic font-normal text-rose-200 text-3xl sm:text-5xl md:text-6xl tracking-tight filter drop-shadow">
+                  Let's Connect
+                </span>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center gap-3 pt-2">
               <span className="font-sans font-bold text-lg sm:text-2xl text-white tracking-tight">
                 nmanish10@gmail.com
               </span>
 
               <button
                 onClick={handleCopyEmail}
-                className="px-3 py-1 rounded-full bg-black/30 hover:bg-black/50 text-white font-mono text-xs uppercase tracking-wider transition-all cursor-pointer border border-white/20"
+                className="px-3.5 py-1.5 rounded-full bg-black/40 hover:bg-black/60 text-white font-mono text-xs uppercase tracking-wider transition-all cursor-pointer border border-white/20 active:scale-95"
               >
                 {copied ? "✓ COPIED" : "COPY EMAIL"}
               </button>
             </div>
 
-            {/* "SEE RESUME" Action Button (Reference Image 3) */}
+            {/* "SEE RESUME" Action Button + Fast Social Icons */}
             <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4">
               <button
                 onClick={() => {
@@ -72,9 +94,10 @@ export default function RedSayHiFooter({ onOpenDossier }) {
                   } catch {}
                   onOpenDossier?.();
                 }}
-                className="px-6 py-2.5 rounded-lg bg-white hover:bg-slate-100 text-black font-display font-black text-sm tracking-wider uppercase shadow-[0_5px_15px_rgba(0,0,0,0.3)] transition-all active:scale-95 cursor-pointer"
+                className="px-6 py-3 rounded-xl bg-black hover:bg-neutral-900 text-white font-mono text-xs sm:text-sm font-bold tracking-wider border-2 border-white/30 hover:border-white shadow-xl transition-all active:scale-95 cursor-pointer flex items-center gap-2"
               >
-                SEE RESUME
+                <span>↗</span>
+                <span>SEE RESUME</span>
               </button>
 
               <div className="flex items-center gap-2">
@@ -82,7 +105,7 @@ export default function RedSayHiFooter({ onOpenDossier }) {
                   href="https://www.linkedin.com/in/manish-nooli/"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-9 h-9 rounded-full bg-black/30 hover:bg-black/60 border border-white/20 flex items-center justify-center text-sm font-bold text-white transition-all"
+                  className="w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 border border-white/30 flex items-center justify-center text-sm font-bold text-white transition-all cursor-pointer"
                   title="LinkedIn"
                 >
                   in
@@ -91,7 +114,7 @@ export default function RedSayHiFooter({ onOpenDossier }) {
                   href="https://medium.com/@nmanish"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-9 h-9 rounded-full bg-black/30 hover:bg-black/60 border border-white/20 flex items-center justify-center text-sm font-bold text-white transition-all"
+                  className="w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 border border-white/30 flex items-center justify-center text-sm font-bold text-white transition-all cursor-pointer"
                   title="Medium"
                 >
                   M
@@ -100,7 +123,7 @@ export default function RedSayHiFooter({ onOpenDossier }) {
                   href="https://www.behance.net/nmanish"
                   target="_blank"
                   rel="noreferrer"
-                  className="w-9 h-9 rounded-full bg-black/30 hover:bg-black/60 border border-white/20 flex items-center justify-center text-sm font-bold text-white transition-all"
+                  className="w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 border border-white/30 flex items-center justify-center text-sm font-bold text-white transition-all cursor-pointer"
                   title="Behance"
                 >
                   Bē
@@ -109,18 +132,18 @@ export default function RedSayHiFooter({ onOpenDossier }) {
             </div>
           </div>
 
-          {/* CENTER: Fast Direct Inquiry with Chromatic Send Button (Attachment 6) */}
-          <div className="max-w-md w-full bg-black/40 backdrop-blur-md p-4 rounded-3xl border border-white/20 space-y-3">
+          {/* CENTER: Fast Direct Inquiry with Chromatic Send Button */}
+          <div className="max-w-md w-full bg-black/45 backdrop-blur-md p-5 rounded-3xl border-2 border-white/20 space-y-3 shadow-2xl">
             <div className="text-[11px] font-mono text-white/90 uppercase tracking-wider font-bold">
               SEND DIRECT TRANSMISSION:
             </div>
-            <div className="flex flex-col sm:flex-row items-center gap-2">
+            <div className="flex flex-col sm:flex-row items-center gap-2.5">
               <input
                 type="text"
                 value={inquiryText}
                 onChange={(e) => setInquiryText(e.target.value)}
                 placeholder="Leave a project brief or say hello..."
-                className="w-full bg-black/60 px-4 py-2.5 rounded-full text-xs sm:text-sm text-white placeholder-white/50 border border-white/20 outline-none font-sans"
+                className="w-full bg-black/60 px-4 py-2.5 rounded-xl text-xs sm:text-sm text-white placeholder-white/50 border border-white/20 outline-none font-sans"
               />
               <div className="shrink-0 w-full sm:w-auto flex justify-end">
                 <ChromaticSendButton

@@ -12,6 +12,7 @@ export const CASSETTE_TRACKS = [
     catArtwork: "🐱",
     duration: "02:40",
     audioSrc: "/audio/killin_em.mp3",
+    pillTheme: "mint",
   },
   {
     id: "goa-gone-rong",
@@ -22,6 +23,7 @@ export const CASSETTE_TRACKS = [
     catArtwork: "🌴",
     duration: "02:15",
     audioSrc: "/audio/goa_gone_rong.mp3",
+    pillTheme: "yellow",
   },
   {
     id: "delirium-trailer",
@@ -32,6 +34,7 @@ export const CASSETTE_TRACKS = [
     catArtwork: "🎬",
     duration: "01:14",
     audioSrc: "/audio/trailer_music_1.mp3",
+    pillTheme: "coral",
   },
   {
     id: "swagger-intro",
@@ -42,6 +45,7 @@ export const CASSETTE_TRACKS = [
     catArtwork: "⚡",
     duration: "03:10",
     audioSrc: "/audio/swagger_intro.mp3",
+    pillTheme: "lavender",
   },
 ];
 
@@ -150,18 +154,37 @@ export default function MusicBubbleExperience() {
   return (
     <section
       id="music-experience"
-      className="relative py-20 sm:py-28 px-4 sm:px-8 max-w-6xl mx-auto select-none border-t border-white/10 overflow-hidden"
+      className="relative py-24 sm:py-32 px-4 sm:px-8 max-w-6xl mx-auto select-none border-t border-white/10 overflow-hidden"
     >
-      {/* SECTION HEADER: Clean & Atmospheric */}
-      <div className="text-center space-y-2 pb-10 sm:pb-14 max-w-2xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#3d090f] border border-[#781822] text-xs font-mono text-rose-300">
-          <span className="w-2 h-2 rounded-full bg-rose-500 animate-pulse" />
-          <span>// SOUND LAB &amp; AUDIBLE GROOVE</span>
+      {/* SECTION HEADER: Editorial Font Mixing & Pastel Stickers (Hero Matching) */}
+      <div className="relative text-center space-y-4 max-w-3xl mx-auto pb-10 sm:pb-14">
+        
+        {/* Top Pastel Sticker Row */}
+        <div className="flex items-center justify-center gap-3 sm:gap-6 mb-2 flex-wrap">
+          <div className="px-3.5 py-1 rounded-full bg-[#dcfce7] text-[#14532d] border border-[#86efac] shadow-sm font-mono text-[10px] sm:text-xs font-bold tracking-wider rotate-[-2deg]">
+            AUDIBLE GROOVE
+          </div>
+          <span className="font-['Playfair_Display'] italic text-slate-300 text-sm sm:text-base font-normal tracking-wide">
+            music that fuels focus
+          </span>
+          <div className="px-3.5 py-1 rounded-full bg-[#fef9c3] text-[#713f12] border border-[#fde047] shadow-sm font-mono text-[10px] sm:text-xs font-bold tracking-wider rotate-[2deg]">
+            33⅓ RPM
+          </div>
         </div>
-        <h3 className="font-display font-black text-3xl sm:text-5xl text-white tracking-tight">
-          Vintage Sound Console &amp; <span className="font-serifTitle italic font-normal text-rose-400">Killin'em</span>
-        </h3>
-        <p className="font-sans text-xs sm:text-sm text-slate-300 font-light max-w-md mx-auto">
+
+        {/* Masterful Headline with Font Mixing */}
+        <div className="space-y-1">
+          <h2 className="font-['Anton',sans-serif] text-5xl sm:text-7xl md:text-8xl tracking-wider text-white uppercase leading-none filter drop-shadow">
+            VINTAGE CONSOLE
+          </h2>
+          <div className="-mt-3 sm:-mt-6">
+            <span className="font-['Playfair_Display'] italic font-normal text-rose-400 text-2xl sm:text-4xl md:text-5xl tracking-tight filter drop-shadow-md">
+              Killin'em &amp; Studio Beats
+            </span>
+          </div>
+        </div>
+
+        <p className="font-sans text-xs sm:text-sm text-slate-300 font-light max-w-lg mx-auto leading-relaxed pt-2">
           Equipped with your custom studio MP3 tracks. Discs slide neatly into the player window when chosen.
         </p>
       </div>
@@ -172,8 +195,8 @@ export default function MusicBubbleExperience() {
           ======================================================================== */}
       <div className="relative w-full flex items-center justify-center min-h-[360px] sm:min-h-[400px]">
         
-        {/* Soft Ambient Underglow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[320px] rounded-full bg-[#5c131a]/25 blur-[120px] pointer-events-none" />
+        {/* Soft Ambient Warm Underglow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[340px] rounded-full bg-[#5c131a]/25 blur-[120px] pointer-events-none" />
 
         {/* ================= LEFT FLANKING DISC ================= */}
         <div className="hidden sm:flex items-center justify-end pr-6 sm:pr-10 z-10">
@@ -189,7 +212,7 @@ export default function MusicBubbleExperience() {
             <HolographicFoil />
             <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white border border-neutral-400 flex flex-col items-center justify-center z-10 shadow-sm text-center">
               <span className="text-xl filter drop-shadow">{prevTrack.catArtwork}</span>
-              <span className="text-[7px] font-display font-black text-rose-600 uppercase tracking-tighter truncate max-w-[42px]">
+              <span className="text-[7px] font-sans font-black text-rose-600 uppercase tracking-tighter truncate max-w-[42px]">
                 {prevTrack.title}
               </span>
               <span className="text-[5px] font-mono text-neutral-600">NO.{prevTrack.labelNo}</span>
@@ -200,7 +223,6 @@ export default function MusicBubbleExperience() {
 
         {/* ========================================================================
             CENTER VINTAGE RADIO CONSOLE (Deep Maroon / Burgundy Luxury Unit)
-            (Exact match to Reference Image Frame 2147224397)
             ======================================================================== */}
         <div className="relative z-20 shrink-0">
           
@@ -215,7 +237,6 @@ export default function MusicBubbleExperience() {
 
             {/* ========================================================
                 ELONGATED OVAL STADIUM WINDOW (LCD Display + Properly Nested Spinning CD)
-                All content is STRICTLY nested and clipped inside this window!
                 ======================================================== */}
             <div className="relative w-full h-[142px] sm:h-[156px] rounded-[38px] bg-[#120306] border-4 border-[#2d070c] shadow-[inset_0_4px_15px_rgba(0,0,0,0.95)] p-3 sm:p-4 flex items-center justify-between overflow-hidden my-auto">
               
@@ -232,7 +253,7 @@ export default function MusicBubbleExperience() {
                       NO.{activeTrack.labelNo} STEREO
                     </span>
                   </div>
-                  <h4 className="font-display font-black text-sm sm:text-base text-white truncate max-w-[125px]">
+                  <h4 className="font-sans font-bold text-sm sm:text-base text-white truncate max-w-[125px]">
                     {activeTrack.title}
                   </h4>
                   <p className="font-sans text-[10px] text-amber-200/80 font-light truncate max-w-[125px]">
@@ -292,7 +313,7 @@ export default function MusicBubbleExperience() {
 
                   <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-white border border-neutral-400 flex flex-col items-center justify-center z-10 shadow-sm text-center">
                     <span className="text-lg sm:text-xl filter drop-shadow">{activeTrack.catArtwork}</span>
-                    <span className="text-[7px] font-display font-black text-rose-600 uppercase tracking-tighter truncate max-w-[38px]">
+                    <span className="text-[7px] font-sans font-black text-rose-600 uppercase tracking-tighter truncate max-w-[38px]">
                       {activeTrack.title}
                     </span>
                   </div>
@@ -376,7 +397,7 @@ export default function MusicBubbleExperience() {
             <HolographicFoil />
             <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white border border-neutral-400 flex flex-col items-center justify-center z-10 shadow-sm text-center">
               <span className="text-xl filter drop-shadow">{nextTrack.catArtwork}</span>
-              <span className="text-[7px] font-display font-black text-rose-600 uppercase tracking-tighter truncate max-w-[42px]">
+              <span className="text-[7px] font-sans font-black text-rose-600 uppercase tracking-tighter truncate max-w-[42px]">
                 {nextTrack.title}
               </span>
               <span className="text-[5px] font-mono text-neutral-600">NO.{nextTrack.labelNo}</span>
@@ -387,26 +408,29 @@ export default function MusicBubbleExperience() {
 
       </div>
 
-      {/* TRACK SELECTION MINI PILLS (Horizontal selector for mobile and quick switching) */}
-      <div className="flex items-center justify-center gap-2 pt-6 flex-wrap">
-        {CASSETTE_TRACKS.map((t, i) => (
-          <button
-            key={t.id}
-            onClick={() => handleSelectTrack(i)}
-            className={`px-3 py-1 rounded-full text-xs font-mono transition-all cursor-pointer border ${
-              currentIdx === i
-                ? "bg-[#6b1620] text-amber-200 border-[#a02634] font-bold shadow-md"
-                : "bg-[#250508] text-slate-300 border-[#480d14] hover:text-white"
-            }`}
-          >
-            <span>{t.catArtwork}</span> {t.title}
-          </button>
-        ))}
+      {/* TRACK SELECTION MINI PILLS: Warm Pastel Sticker Style */}
+      <div className="flex items-center justify-center gap-2.5 pt-6 flex-wrap">
+        {CASSETTE_TRACKS.map((t, i) => {
+          const isSelected = currentIdx === i;
+          return (
+            <button
+              key={t.id}
+              onClick={() => handleSelectTrack(i)}
+              className={`px-3.5 py-1.5 rounded-full text-xs font-mono transition-all cursor-pointer border-2 ${
+                isSelected
+                  ? "bg-[#fef9c3] text-[#713f12] border-[#fde047] font-bold shadow-md scale-105"
+                  : "bg-[#0c0d14]/80 text-slate-300 border-white/15 hover:border-[#f97316]/40 hover:text-white"
+              }`}
+            >
+              <span>{t.catArtwork}</span> {t.title}
+            </button>
+          );
+        })}
       </div>
 
-      {/* BOTTOM VOLUME SLIDER: ONLY VOLUME, NO UNNECESSARY BUTTONS */}
+      {/* BOTTOM VOLUME SLIDER: ONLY VOLUME */}
       <div className="flex items-center justify-center gap-3 pt-6 max-w-xs mx-auto text-xs font-mono">
-        <span className="text-amber-200/70 font-bold">VOL:</span>
+        <span className="text-amber-200/80 font-bold">VOL:</span>
         <input
           type="range"
           min="0"
@@ -414,7 +438,7 @@ export default function MusicBubbleExperience() {
           step="0.05"
           value={volume}
           onChange={(e) => handleVolumeChange(Number(e.target.value))}
-          className="w-32 h-1.5 bg-[#3d0a0f] rounded-lg appearance-none cursor-pointer accent-rose-500"
+          className="w-32 h-1.5 bg-[#3d0a0f] rounded-lg appearance-none cursor-pointer accent-[#f97316]"
         />
         <span className="text-amber-100 font-bold w-9">{Math.round(volume * 100)}%</span>
       </div>

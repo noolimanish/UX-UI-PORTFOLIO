@@ -60,23 +60,23 @@ export default function StickyLanyardBadge({ onOpenDossier }) {
               animate={{ rotateY: isFlipped ? 180 : 0 }}
               transition={{ duration: 0.65, ease: [0.23, 1, 0.32, 1] }}
               style={{ transformStyle: "preserve-3d" }}
-              className="relative w-full h-full rounded-[30px] shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_25px_rgba(16,185,129,0.12)]"
+              className="relative w-full h-full rounded-[30px] shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_25px_rgba(249,115,22,0.15)]"
             >
               {/* FRONT SIDE OF THE CARD */}
               <div
                 style={{ backfaceVisibility: "hidden" }}
-                className="absolute inset-0 rounded-[30px] bg-[#0c0d12] border border-white/10 p-4 sm:p-5 flex flex-col justify-between items-center text-white overflow-hidden shadow-2xl group"
+                className="absolute inset-0 rounded-[30px] bg-[#0c0d14] border-2 border-[#f97316]/50 p-4 sm:p-5 flex flex-col justify-between items-center text-white overflow-hidden shadow-2xl group"
               >
-                <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/[0.04] via-transparent to-white/[0.03] pointer-events-none" />
+                <div className="absolute inset-0 opacity-[0.035] pointer-events-none bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:20px_20px]" />
                 <div className="w-10 h-2 rounded-full bg-[#050608] border border-white/10 shadow-inner -mt-1" />
 
                 <div className="relative w-full flex-1 my-3 rounded-[22px] bg-[#16171f] border border-white/10 p-2 sm:p-2.5 flex flex-col items-center justify-center shadow-inner overflow-hidden">
                   <div className="relative w-full h-full rounded-[18px] overflow-hidden bg-[#1f212d] flex items-center justify-center">
                     <div className="w-full h-full bg-gradient-to-b from-[#2a2d3d] to-[#12131a] flex flex-col items-center justify-center relative group-hover:scale-105 transition-transform duration-500">
                       <span className="text-6xl sm:text-7xl filter drop-shadow">👨‍💻</span>
-                      <div className="absolute bottom-2 left-2 flex items-center gap-1.5 bg-black/60 px-2.5 py-0.5 rounded-full border border-white/10">
+                      <div className="absolute bottom-2 left-2 flex items-center gap-1.5 bg-black/70 px-2.5 py-0.5 rounded-full border border-white/10">
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                        <span className="text-[8px] font-mono text-emerald-400 font-bold uppercase tracking-wider">
+                        <span className="text-[8px] font-mono text-emerald-300 font-bold uppercase tracking-wider">
                           ONLINE // LVL 48
                         </span>
                       </div>
@@ -84,16 +84,16 @@ export default function StickyLanyardBadge({ onOpenDossier }) {
                   </div>
 
                   <div className="absolute bottom-4 inset-x-6 flex justify-center">
-                    <div className="px-5 py-1.5 rounded-full bg-[#20222e]/90 hover:bg-[#2c2f3f] border border-white/15 text-[11px] font-sans font-medium text-slate-200 tracking-wide shadow-lg backdrop-blur-md transition-all flex items-center gap-1.5 group-hover:border-emerald-400/50">
-                      <span>TAP TO REVEAL</span>
-                      <span className="text-[10px] text-emerald-400">↻</span>
+                    <div className="px-4 py-1 rounded-full bg-black/80 hover:bg-black border border-white/20 text-[10px] font-mono font-bold text-slate-200 tracking-wider shadow-lg backdrop-blur-md transition-all flex items-center gap-1.5 group-hover:border-[#f97316]">
+                      <span>TAP TO FLIP</span>
+                      <span className="text-[10px] text-amber-300">↻</span>
                     </div>
                   </div>
                 </div>
 
-                <div className="w-full flex items-center justify-between text-[10px] font-mono text-slate-400 pt-1">
-                  <span className="font-semibold text-white tracking-wide">MANISH NOOLI</span>
-                  <span className="text-emerald-400 text-[9px]">UI/UX ARCHITECT</span>
+                <div className="w-full flex items-center justify-between text-[10px] font-mono text-slate-300 pt-1">
+                  <span className="font-bold text-white tracking-wide">MANISH NOOLI</span>
+                  <span className="text-amber-300 text-[9px] font-bold">PRODUCT ARCHITECT</span>
                 </div>
               </div>
 
@@ -103,34 +103,34 @@ export default function StickyLanyardBadge({ onOpenDossier }) {
                   backfaceVisibility: "hidden",
                   transform: "rotateY(180deg)",
                 }}
-                className="absolute inset-0 rounded-[30px] bg-[#0c0d12] border border-white/15 p-4 sm:p-5 flex flex-col justify-between text-white shadow-2xl"
+                className="absolute inset-0 rounded-[30px] bg-[#0c0d14] border-2 border-[#f97316]/50 p-4 sm:p-5 flex flex-col justify-between text-white shadow-2xl relative overflow-hidden"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/[0.05] via-transparent to-transparent pointer-events-none rounded-[30px]" />
+                <div className="absolute inset-0 opacity-[0.035] pointer-events-none bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:20px_20px]" />
                 <div className="w-10 h-2 mx-auto rounded-full bg-[#050608] border border-white/10 shadow-inner -mt-1" />
 
-                <div className="flex flex-col items-center space-y-2 pt-1">
-                  <div className="w-11 h-11 rounded-2xl bg-[#1d1f2b] border border-white/15 flex items-center justify-center font-display font-extrabold text-lg text-emerald-400 shadow-md">
+                <div className="flex flex-col items-center space-y-1.5 pt-1 relative z-10">
+                  <div className="w-11 h-11 rounded-2xl bg-[#0c0d14] border-2 border-[#f97316]/40 flex items-center justify-center font-['Anton',sans-serif] text-lg text-amber-300 shadow-md">
                     MN
                   </div>
 
                   <div className="text-center space-y-0.5">
-                    <h4 className="font-display font-bold text-base sm:text-lg text-white tracking-tight">
+                    <h4 className="font-['Anton',sans-serif] text-base sm:text-lg text-white uppercase tracking-wider leading-none">
                       Manish Nooli
                     </h4>
-                    <p className="font-sans text-xs text-slate-400 font-light">
-                      Lead UI/UX &amp; Product Designer
+                    <p className="font-['Playfair_Display'] italic text-xs text-rose-400">
+                      Product Designer &amp; UI/UX
                     </p>
                   </div>
                 </div>
 
-                <div className="space-y-1.5 font-sans text-xs py-2 px-1 border-y border-white/10 my-auto">
+                <div className="space-y-1.5 font-sans text-xs py-2 px-1 border-y border-white/10 my-auto relative z-10">
                   <div className="flex justify-between items-center text-slate-300">
                     <span className="text-slate-400 font-light">Role</span>
-                    <span className="font-medium text-white">: Product Architect</span>
+                    <span className="font-medium text-white">: Lead Designer</span>
                   </div>
                   <div className="flex justify-between items-center text-slate-300">
                     <span className="text-slate-400 font-light">Experience</span>
-                    <span className="font-medium text-emerald-400">: 4+ Years Shipping</span>
+                    <span className="font-medium text-emerald-300">: 4+ Years Shipping</span>
                   </div>
                   <div className="flex justify-between items-center text-slate-300">
                     <span className="text-slate-400 font-light">Specialty</span>
@@ -142,10 +142,10 @@ export default function StickyLanyardBadge({ onOpenDossier }) {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-center gap-2 pt-1">
+                <div className="flex items-center justify-center gap-2 pt-1 relative z-10">
                   <button
                     onClick={handleCopyEmail}
-                    className="px-3 py-1 rounded-full bg-emerald-500/20 hover:bg-emerald-500 text-emerald-300 hover:text-black border border-emerald-400/40 text-[10px] font-mono font-bold transition-all"
+                    className="px-3 py-1 rounded-full bg-[#dcfce7] text-[#14532d] border border-[#86efac] text-[10px] font-mono font-bold transition-all shadow-sm active:scale-95 cursor-pointer"
                   >
                     {copied ? "✓ COPIED" : "✉ EMAIL"}
                   </button>
@@ -155,17 +155,17 @@ export default function StickyLanyardBadge({ onOpenDossier }) {
                         e.stopPropagation();
                         onOpenDossier();
                       }}
-                      className="px-3 py-1 rounded-full bg-white/10 hover:bg-white text-white hover:text-black border border-white/20 text-[10px] font-mono font-bold transition-all"
+                      className="px-3 py-1 rounded-full bg-[#fef9c3] text-[#713f12] border border-[#fde047] text-[10px] font-mono font-bold transition-all shadow-sm active:scale-95 cursor-pointer"
                     >
                       DOSSIER ↗
                     </button>
                   )}
                 </div>
 
-                <div className="flex justify-center pt-1">
-                  <div className="px-4 py-1 rounded-full bg-[#1e202a] text-[10px] font-sans text-slate-300 flex items-center gap-1">
-                    <span>TAP TO FLIP BACK</span>
-                    <span className="text-emerald-400">↺</span>
+                <div className="flex justify-center pt-1 relative z-10">
+                  <div className="px-4 py-1 rounded-full bg-black/60 text-[10px] font-mono text-slate-300 flex items-center gap-1 border border-white/10">
+                    <span>FLIP BACK</span>
+                    <span className="text-amber-300">↺</span>
                   </div>
                 </div>
               </div>
@@ -178,7 +178,7 @@ export default function StickyLanyardBadge({ onOpenDossier }) {
       <div className="block lg:hidden fixed bottom-6 right-4 z-40">
         <button
           onClick={onOpenDossier}
-          className="px-4 py-2.5 rounded-full bg-[#12131a]/95 backdrop-blur-xl border border-emerald-400/50 shadow-[0_10px_25px_rgba(0,0,0,0.9),0_0_15px_rgba(16,185,129,0.3)] text-white text-xs font-mono font-bold flex items-center gap-2 active:scale-95 cursor-pointer"
+          className="px-4 py-2.5 rounded-full bg-[#0c0d14]/95 backdrop-blur-xl border-2 border-[#f97316]/50 shadow-[0_10px_25px_rgba(0,0,0,0.9),0_0_15px_rgba(249,115,22,0.3)] text-white text-xs font-mono font-bold flex items-center gap-2 active:scale-95 cursor-pointer"
           title="Open Manish Nooli Profile Dossier"
         >
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
